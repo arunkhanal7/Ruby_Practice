@@ -63,7 +63,8 @@ puts array
 #multi dimensional array : we can contain arrays inside a array
 puts (" ")
 men = [['a',20],['b',25],['c',30]]
-
+puts men[0]
+puts men[0][0]
 
 
 
