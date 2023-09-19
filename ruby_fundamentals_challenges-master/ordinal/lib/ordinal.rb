@@ -1,11 +1,13 @@
+
 def ordinal(number)
-  if number == 1
-    return number.to_s + "st"
-  elsif number == 2
-    return number.to_s + "nd"
-  elsif number == 3
-    return number.to_s + "rd"
+  if (11..13).include?(number % 100)
+    "#{number}th"
   else
-    return number.to_s + "th"
+    case number % 10
+    when 1 then "#{number}st"
+    when 2 then "#{number}nd"
+    when 3 then "#{number}rd"
+    else "#{number}th"
+    end
   end
 end
